@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { signOut } from "@/lib/auth";
 
 const links = [
   { href: "/", title: "Dashboard", icon: "M3 3h8v10H3zM13 3h8v6h-8zM13 11h8v10h-8zM3 15h8v6H3z" },
@@ -32,6 +33,7 @@ export function Sidebar() {
         })}
       </nav>
       <p className="sidebar-note">Trial storage: everything is saved in this browser only and is not on the website yet.</p>
+      <button type="button" className="sidebar-signout" onClick={signOut}>Sign out</button>
     </aside>
   );
 }

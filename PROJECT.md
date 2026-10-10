@@ -17,7 +17,7 @@ The owner chose Supabase but asked for the screens first and the connection late
 - The Orders page has no real orders. "Show sample orders" adds three made-up ones (`INV-SAMPLE1` to `3`) for previewing.
 - The Orders page has a second tab, Customised orders, for pieces customers drew on the website's Try Customise page. Those drawings reach the owner on WhatsApp, so the owner adds each one by hand with "Add a customised order" (reference `CUS-XXXXXX`, customer, piece, size, the drawing, the price sent). "Show sample customised orders" adds two made-up ones (`CUS-SAMPLE1` and `2`).
 - Uploaded pictures are shrunk to 1600px and stored inside the product or banner as `data:` addresses.
-- There is no login. Do not put this admin online until Supabase sign-in is added.
+- Sign-in is a stand-in (added 2026-10-11 at the owner's request): one fixed mobile number and one fixed 4-digit OTP in `lib/auth.ts`, checked in the browser by `components/auth-gate.tsx`, which wraps the whole app in `app/layout.tsx`. No SMS is sent. Both values are readable in the page's code, so it is not real security. Do not put this admin online until Supabase sign-in replaces it.
 
 ## Stack
 

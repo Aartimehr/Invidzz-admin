@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { AuthGate } from "@/components/auth-gate";
 import { Sidebar } from "@/components/sidebar";
 import "./globals.css";
 
@@ -18,10 +19,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} antialiased`}>
       <body>
-        <div className="shell">
-          <Sidebar />
-          <main className="main">{children}</main>
-        </div>
+        <AuthGate>
+          <div className="shell">
+            <Sidebar />
+            <main className="main">{children}</main>
+          </div>
+        </AuthGate>
       </body>
     </html>
   );

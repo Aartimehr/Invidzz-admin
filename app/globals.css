@@ -44,6 +44,17 @@ h1 { font-family: Georgia, "Times New Roman", serif; font-size: 34px; font-weigh
 .sidebar-link.is-current { background: rgba(255,255,255,.13); color: var(--white); font-weight: 500; }
 .sidebar-link svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
 .sidebar-note { margin-top: auto; padding: 12px; border-radius: 8px; background: rgba(255,255,255,.07); color: rgba(255,255,255,.7); font-size: 12px; line-height: 1.45; }
+.sidebar-signout { margin-top: 10px; padding: 10px 12px; border: 1px solid rgba(255,255,255,.22); border-radius: 8px; color: rgba(255,255,255,.8); font-size: 13px; }
+.sidebar-signout:hover { background: rgba(255,255,255,.07); color: var(--white); }
+
+/* Sign in */
+.signin { min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; background: var(--green); }
+.signin-card { width: min(380px, 100%); padding: 32px 28px; border-radius: 14px; background: var(--white); box-shadow: 0 24px 80px rgba(0,0,0,.3); }
+.signin-logo { width: 120px; height: auto; margin-bottom: 22px; border-radius: 6px; }
+.signin-form { display: flex; flex-direction: column; gap: 16px; }
+.signin-form .page-sub { margin-bottom: 4px; }
+.signin-form .link-button { align-self: center; }
+.field .signin-otp { font-size: 20px; letter-spacing: .4em; text-align: center; }
 
 /* Page heading and shared pieces */
 .page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
